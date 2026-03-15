@@ -55,9 +55,7 @@ template <BookContainerLike T>
 auto sampleRandomBooks(const BookDatabase<T>& db, int count) {
 	std::vector<std::reference_wrapper<const Book>> res;
 
-	for (int i = 0; i < count && i < db.size(); ++i) {
-		res.push_back(std::cref(db.GetBooks()[db.size() - 1 - i]));
-	}
+	std::for_each(db.GetBooks().crbegin(), db.GetBooks().crbegin() + count, [&res](const Book& b) {res.push_back(std::cref(b)); });
 
 	return res;
 }
