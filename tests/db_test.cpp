@@ -181,4 +181,4 @@ TEST(BookDB, Orwell) {
     auto orwellBookIt = std::find_if(db.begin(), db.end(), [](const auto &v) { return v.author == "George Orwell"; });
 
     ASSERT_TRUE(orwellBookIt->title == "1984");
-}
+} 
