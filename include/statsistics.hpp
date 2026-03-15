@@ -58,7 +58,7 @@ auto sampleRandomBooks(const BookDatabase<T>& db, int count) {
 	std::for_each(db.GetBooks().crbegin(), db.GetBooks().crbegin() + count, [&res](const Book& b) {res.push_back(std::cref(b)); });
 
 	return res;
-}
+} 
 
 template <BookContainerLike T, typename Comparator = TransparentStringLess>
 auto getTopNBy(BookDatabase<T>& db, int count, Comparator comp = comp::LessByRating{}) {
