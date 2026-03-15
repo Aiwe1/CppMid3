@@ -1,11 +1,11 @@
 #include <algorithm>
 
-#include "book_database.hpp"
-#include "comparators.hpp"
-#include "filters.hpp"
-#include "statsistics.hpp"
+// #include "book_database.hpp"
+// #include "comparators.hpp"
+// #include "filters.hpp"
+// #include "statsistics.hpp"
 
-using namespace bookdb;
+// using namespace bookdb;
 
 int main() {
     //
@@ -18,11 +18,7 @@ int main() {
     //
 
     // Create a book database
-    BookDatabase<std::vector<Book>> db;
-
-    /*
-
-    Код закомментирован, чтобы не приводить к ошибке компиляции
+    // BookDatabase<std::vector<Book>> db;
 
     // Add some books
     db.EmplaceBack("1984", "George Orwell", 1949, Genre::SciFi, 4., 190);
@@ -69,7 +65,7 @@ int main() {
     if (orwellBookIt != db.end()) {
         std::print("\n\nTransparent lookup by authors. Found Orwell's book: {}\n", *orwellBookIt);
     }
-    */
+    
 
     return 0;
 }
